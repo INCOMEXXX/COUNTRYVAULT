@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
 import { useEffect, useState } from "react";
 
+import countriesData from "./data.json";
+
 // FIRST STEP . CREATE A FOLDER ON SRC.--IF THERE ARE MORE PAGES  , CREATE TWO FOLDERS .FIRST .COMPONENTS , SECOND . PAGES .
 
 // BROWSER ROUTER WRAPS THE WHOLE WEBSITES
@@ -12,24 +14,25 @@ import { useEffect, useState } from "react";
 function App() {
   // DECLEARING INITIALS ..........
 
-  const [allCountries, setAllCountries] = useState([]);
+  const [allCountries] = useState(countriesData);
 
   const [filteredCountries, setFilteredCountries] = useState([]);
+  const [isLoading, setisLoading] = useState(true);
 
   // AFTER DECLEARATION , WE FETCH .....................
 
-  useEffect(() => {
-    const getData = async () => {
-      const fetchData = await fetch("/data.json");
-      const convertedData = await fetchData.json();
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const fetchData = await fetch("/data.json");
+  //     const convertedData = await fetchData.json();
 
-      console.log(convertedData);
+  //     console.log(convertedData);
 
-      setAllCountries(convertedData);
-    };
-    // AFTER DECLARING , COMES FETCHING .... DECLEARING ALL GOES INTO USESTATE , USEEFFECT COMES NEXT TO FETCH ... STARTING WITH A BRACKET , THEN A FUNCTION ... THIS NEXT FUNCTION USES ASYNC & AWAIT... CONSOLE LOG THE CONVERTED JSON VARIABLE NAME ... THEN YOU INVOLKE
-    getData();
-  }, []);
+  //     setAllCountries(convertedData);
+  //   };
+  //   // AFTER DECLARING , COMES FETCHING .... DECLEARING ALL GOES INTO USESTATE , USEEFFECT COMES NEXT TO FETCH ... STARTING WITH A BRACKET , THEN A FUNCTION ... THIS NEXT FUNCTION USES ASYNC & AWAIT... CONSOLE LOG THE CONVERTED JSON VARIABLE NAME ... THEN YOU INVOLKE
+  //   getData();
+  // }, []);
 
   // ================FILTER BY SEARCH
   const filterBySearch = (searched) => {

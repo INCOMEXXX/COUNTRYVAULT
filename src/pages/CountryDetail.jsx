@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import EachCountry from "../components/EachCountry";
 import { useLocation, useParams } from "react-router-dom";
 
-const CountryDetail = ({ detailsByCountry }) => {
+import countriesData from "../data.json";
+
+const CountryDetail = () => {
   const { countryName } = useParams();
 
   const { state } = useLocation();
@@ -10,7 +12,7 @@ const CountryDetail = ({ detailsByCountry }) => {
 
   const findCountry =
     state.country ||
-    detailsByCountry.find((country) => {
+    countriesData.find((country) => {
       return country.name === decodeURIComponent(countryName);
     });
 
