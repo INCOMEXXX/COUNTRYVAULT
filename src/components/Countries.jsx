@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Countries = ({ getTheWorld }) => {
   return (
-    <div className="grid sm:grid-cols-4  gap-[60px] sm:items-start flex flex-col items-center justify-center">
+    <div className="sm:grid sm:grid-cols-4  gap-[60px] sm:items-start flex flex-col items-center justify-center">
       {getTheWorld.map((country) => {
         return (
           <Link
