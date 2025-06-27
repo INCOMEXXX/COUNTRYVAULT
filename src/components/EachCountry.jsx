@@ -22,7 +22,7 @@ const EachCountry = ({ perCountry }) => {
           navigate("/", { replace: true });
           window.location.reload();
         }}
-        className="sm:my-[60px]  mb-8 shadow-md sm:w-30 w-20 flex items-center justify-between sm:px-6 sm:py-2 px-3 py-1 rounded-md bg-elements"
+        className="sm:my-[60px] my-[60px]  mb-8 shadow-md sm:w-30 w-20 flex items-center justify-between sm:px-6 sm:py-2 px-3 py-1 rounded-md bg-elements"
       >
         <BsArrowLeft />
         <p className="sm:text-[16px] text-[14px]">Back</p>

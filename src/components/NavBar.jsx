@@ -44,7 +44,7 @@ const NavBar = () => {
       >
         {moon}
         <p className="sm:text-[16px] text-[12px] font-semibold">
-          {darkMode ? "Light Mode" : "Dark Mode"}
+          {darkMode ? "Dark Mode" : "Light Mode"}
         </p>
       </div>
     </div>

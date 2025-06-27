@@ -12,7 +12,7 @@ import countriesData from "./data.json";
 // BROWSER ROUTER WRAPS THE WHOLE WEBSITES
 
 function App() {
-  // DECLEARING INITIALS ..........
+  // DECLEARING INITIALS ..........\
 
   const [allCountries] = useState(countriesData);
 
